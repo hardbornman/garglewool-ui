@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@/components/*": ["./src/components/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/package": ["./package.json"],
+      "@/project": ["./project.config.json"],
+    },
     "target": "es2017",
     "module": "commonjs",
     "removeComments": false,
