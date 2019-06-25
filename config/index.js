@@ -1,5 +1,7 @@
+const path = require('path');
+
 const config = {
-  projectName: 'T',
+  projectName: 'garglewool',
   date: '2019-6-25',
   designWidth: 750,
   deviceRatio: {
@@ -9,6 +11,12 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/package': path.resolve(__dirname, '..', 'package.json'),
+    '@/project': path.resolve(__dirname, '..', 'project.config.json'),
+  },
   plugins: {
     babel: {
       sourceMap: true,

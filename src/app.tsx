@@ -2,7 +2,7 @@ import '@tarojs/async-await'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
-import Index from './pages/index'
+import Index from './pages/home'
 
 import configStore from './store'
 
@@ -27,27 +27,54 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/home/index',
+      'pages/coupon/index',
+      'pages/mine/index',
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      color: '#000',
+      selectedColor: '#f13b18',
+      backgroundColor: '#fff',
+      list: [
+        {
+          text: '往下拍',
+          pagePath: 'pages/home/index',
+          iconPath: './images/shangcheng-0.png',
+          selectedIconPath: './images/shangcheng-1.png',
+        },
+        {
+          text: '优惠券',
+          pagePath: 'pages/coupon/index',
+          iconPath: './images/youhuiquan-0.png',
+          selectedIconPath: './images/youhuiquan-1.png',
+        },
+        {
+          text: '我的',
+          pagePath: 'pages/mine/index',
+          iconPath: './images/wode-0.png',
+          selectedIconPath: './images/wode-1.png',
+        },
+      ]
+    },
   }
 
-  componentDidMount () {}
+  componentDidMount() { }
 
-  componentDidShow () {}
+  componentDidShow() { }
 
-  componentDidHide () {}
+  componentDidHide() { }
 
-  componentDidCatchError () {}
+  componentDidCatchError() { }
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
+  render() {
     return (
       <Provider store={store}>
         <Index />
