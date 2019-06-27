@@ -19,12 +19,44 @@ interface Index {
 }
 
 class Index extends Component {
-  state = {}
+  state = {
+    list: [
+      {
+        /* 标题 */
+        title: '话实说实话实说实话实说实话实说实话实说实话实说',
+        /* 是否有优惠券 */
+        hasTicket: true,
+        /* 店铺名 */
+        storeName: '实话实说实',
+        /* 距离 */
+        distance: '12m',
+        /* 足迹（浏览量） */
+        footprint: '10k',
+        /* 成交量 */
+        VOL: '12',
+        /* 售价 */
+        price: '$1',
+        /* 历史价格 */
+        oldPrice: '$0',
+        /* 按钮名称 */
+        btnText: '砍价',
+        /* 按钮点击事件 */
+        btnClick: () => {
+          console.log('点击了');
+        },
+      }
+    ]
+  }
 
   render() {
+    const { list } = this.state;
     return (
       <View>
-        <Box></Box>
+        {
+          list.map(item =>
+            <Box {...item}></Box>
+          )
+        }
       </View>
     )
   }

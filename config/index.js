@@ -14,8 +14,10 @@ const config = {
   alias: {
     '@/components': path.resolve(__dirname, '..', 'src/components'),
     '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/services': path.resolve(__dirname, '..', 'src/services'),
     '@/package': path.resolve(__dirname, '..', 'package.json'),
     '@/project': path.resolve(__dirname, '..', 'project.config.json'),
+    '@ajax': path.resolve(__dirname, '..', 'src/request.tsx'),
   },
   plugins: {
     babel: {

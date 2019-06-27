@@ -5,6 +5,7 @@
       "@/utils/*": ["./src/utils/*"],
       "@/package": ["./package.json"],
       "@/project": ["./project.config.json"],
+      "@ajax": ["./src/request.tsx"]
     },
     "target": "es2017",
     "module": "commonjs",

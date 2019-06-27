@@ -2,6 +2,7 @@ import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Button, Text } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
+import service from '@/services/api/DefaultApi'
 import './index.scss'
 
 import CustomTab from './tabs/custom'
@@ -36,6 +37,12 @@ class Index extends Component {
       { title: '日韩料理' },
       { title: '生活服务' }
     ]
+  }
+
+  componentDidMount(){
+    console.log(service);
+    service.$basePath = 'http://forfuture.club:3000/mock/12'
+    service.gwCommentsGet({})
   }
 
   tabHandleClick = index => {

@@ -9,7 +9,28 @@ type PageStateProps = {}
 
 type PageDispatchProps = {}
 
-type PageOwnProps = {}
+type PageOwnProps = {
+  /* 标题 */
+  title: String,
+  /* 是否有优惠券 */
+  hasTicket: Boolean,
+  /* 店铺名 */
+  storeName: String,
+  /* 距离 */
+  distance: String,
+  /* 足迹（浏览量） */
+  footprint: String,
+  /* 成交量 */
+  VOL: String,
+  /* 售价 */
+  price: String,
+  /* 历史价格 */
+  oldPrice: String,
+  /* 按钮名称 */
+  btnText: String,
+  /* 按钮点击事件 */
+  btnClick: () => void,
+}
 
 type PageState = {}
 
@@ -23,6 +44,7 @@ class Index extends Component {
   state = {}
 
   render() {
+    const { title, distance, footprint, VOL, price, oldPrice, btnText, btnClick, hasTicket, storeName } = this.props;
     return (
       <View>
         <View className='at-row'>
@@ -31,34 +53,34 @@ class Index extends Component {
           </View>
           <View className='right-c mt-2' style={{ display: 'flex', flexDirection: 'column' }}>
             <View className="at-row md-t t1">
-              到店原价长跑买一送一福利(不超过高价)
+              {title}
             </View>
             <View className="at-row sm-t justify-bet t2">
               <View style={{ display: 'flex', alignItems: 'center' }}>
-                <Image className="ticket-img" src={ticketImg} />
-                饮茶（语花店）
+                {hasTicket && <Image className="ticket-img" src={ticketImg} />}
+                {storeName}
               </View>
               <View className="">
-                846m
+                {distance}
               </View>
             </View>
             <View className="at-row sm-t t3 mt-4">
               <View className="">
                 <AtIcon prefixClass='iconfont icon-liulan' size="14" color='#F00'></AtIcon>
-                <Text className="ml-2">37</Text>
+                <Text className="ml-2">{footprint}</Text>
               </View>
               <View className="mt-5 ml-5">
                 <AtIcon prefixClass='iconfont icon-jiaoyi' size="14" color='#F00'></AtIcon>
-                <Text className="ml-2">37</Text>
+                <Text className="ml-2">{VOL}</Text>
               </View>
             </View>
             <View className="at-row md-t justify-bet" style={{ marginTop: 'auto' }}>
               <View className="price">
-                <Text>$11</Text>
-                <Text className="old-price" style={{ textDecoration: 'line-through' }}>$20</Text>
+                <Text>{price}</Text>
+                <Text className="old-price" style={{ textDecoration: 'line-through' }}>{oldPrice}</Text>
               </View>
               <View>
-                <Button className="btn-1">砍价</Button>
+                <Button className="btn-1" onClick={btnClick}>{btnText}</Button>
               </View>
             </View>
           </View>
