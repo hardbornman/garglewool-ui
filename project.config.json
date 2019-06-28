@@ -4,10 +4,13 @@
 	"description": "薅羊毛",
 	"appid": "wxa00e3cd08eb72fcd",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
 		"postcss": false,
-		"minified": false
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",

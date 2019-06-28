@@ -2,8 +2,83 @@
 $color-brand: #f13b18;
 $color-brand-light: #f56c52;
 $color-brand-dark: #c12f13;
+$color-price: #f1870f;
+$color-old-price: #ccc;
+
+.mt-5 {
+  margin-top: 20px !important;
+}
+
+.ml-2{
+  margin-left: 8px !important;
+}
+
+.mr-2{
+  margin-right: 8px !important;
+}
+
+.ml-5{
+  margin-left: 20px !important;
+}
+
+.mt-4 {
+  margin-top: 16px !important;
+}
+
+.t1 {
+  color: rgb(32, 31, 31);
+}
+
+.t2 {
+  color: rgb(110, 107, 107);
+}
+
+.t3 {
+  color: rgb(110, 107, 107);
+}
+
+.sm-t {
+  font-size: 26px !important;
+}
+
+.lg-t{
+  font-size: 40px !important;
+}
+
+.md-t {
+  font-size: 30px !important;
+}
+
+.border-t {
+  border-top: 20px solid #f9f7f7;
+}
+
+.border-b-1{
+  border-bottom: 2px solid #f9f7f7;
+}
+.border-t-1{
+  border-top: 2px solid #f9f7f7;
+}
+
+.padding-2{
+  padding: 10px;
+}
+
+.padding-v-3{
+  padding: 15px 0;
+}
+
+.align-i-c{
+  align-items: center;
+}
 
 @import "~taro-ui/dist/style/components/tabs.scss";
 @import "~taro-ui/dist/style/components/flex.scss";
 @import "~taro-ui/dist/style/components/button.scss";
 @import "~taro-ui/dist/style/components/loading.scss";
+@import "~taro-ui/dist/style/components/divider.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/avatar.scss";
+@import "~taro-ui/dist/style/components/grid.scss";
+@import "~taro-ui/dist/style/components/rate.scss";
+@import "~taro-ui/dist/style/components/list.scss";

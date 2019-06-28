@@ -1,0 +1,50 @@
+.img-box{
+  // height: 350px;
+  margin: 25px;
+  box-shadow: 0 0 12px #dad7d7;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.c1{
+  height: 340px;
+  width: 100%;
+  position: relative;
+}
+
+.c2{
+  // height: 50px;
+}
+
+.img-bg{
+  width: 100%;
+  height: 100%;
+  background-image: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1336363002,2799287953&fm=11&gp=0.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.sm-img{
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+}
+
+.img-text{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0,.4);
+  display: flex;
+  align-items: center;
+}
+
+.foot-c {
+  background-color: #fff;
+  padding:0 10px;
+  align-items: center;
+  height: 65px;
+}

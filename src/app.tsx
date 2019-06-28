@@ -2,12 +2,15 @@ import '@tarojs/async-await'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
+import services from '@/services/api/DefaultApi'
+services.$basePath = 'http://forfuture.club:3000/mock/12'
+
 import Index from './pages/home'
 
 import configStore from './store'
 
 import './app.scss'
-import './assets/iconfont.css'
+// import './assets/iconfont.css'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -15,7 +18,7 @@ import './assets/iconfont.css'
 //   require('nerv-devtools')
 // }
 
-const store = configStore()
+const store = configStore({ services })
 
 class App extends Component {
 
@@ -31,6 +34,7 @@ class App extends Component {
       'pages/home/index',
       'pages/coupon/index',
       'pages/mine/index',
+      'pages/goods/index',
     ],
     window: {
       backgroundTextStyle: 'light',

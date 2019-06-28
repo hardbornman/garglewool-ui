@@ -1,14 +1,15 @@
-import axios, { AxiosError } from 'axios';
+// import axios, { AxiosError } from 'axios';
+import Taro from '@tarojs/taro'
 import qs from 'qs';
 
-const inst = axios.create({
-  timeout: 2000,
-  withCredentials: true,
-  headers: {}
-});
+// const inst = axios.create({
+//   timeout: 2000,
+//   withCredentials: true,
+//   headers: {}
+// });
 
 // @cc: 检测 axios 响应状态
-function onStatusError(error: AxiosError | Error) {
+function onStatusError(error: Error) {
   const err =
     'response' in error && error.response
       ? {
@@ -75,10 +76,14 @@ export class WrappedFetch {
         data: qs.stringify(form)
       };
     }
-    return inst
-      .request({ ...config, url, params: query })
-      .then(res => res.data)
-      .catch(onStatusError);
+
+    return Taro.request({ ...config, url })
+      .then(res => console.log(res.data))
+      .catch(onStatusError)
+    // return inst
+    //   .request({ ...config, url, params: query })
+    //   .then(res => res.data)
+    //   .catch(onStatusError);
   }
 
   /**
@@ -93,6 +98,8 @@ export class WrappedFetch {
       }
     }
   }
+
+
 }
 
 export default new WrappedFetch();
