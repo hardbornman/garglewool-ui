@@ -6,6 +6,7 @@ import './index.scss'
 import { AtButton, AtAvatar, AtRate, AtDivider } from 'taro-ui'
 import CommentBox from '@/components/commentBox'
 import BmButton from '@/components/bmButton'
+import IconText from '@/components/IconText'
 
 import 'taro-ui/dist/style/components/rate.scss'
 
@@ -33,10 +34,34 @@ class Index extends Component {
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561631738581&di=0649a2f040205f4432a3507030215e46&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201411%2F26%2F20141126160858_dWwxt.jpeg',
     ],
     swiperCount: 0,
+    goodsLabels: [
+      {
+        text: '特殊原因',
+        icon: 'iconfont icon-shijian',
+      },
+      {
+        text: '特殊原因',
+        icon: 'iconfont icon-shijian',
+      },
+      {
+        text: '特殊原因',
+        icon: 'iconfont icon-shijian',
+      },
+      {
+        text: '特殊原因',
+        icon: 'iconfont icon-shijian',
+      },
+    ]
+  }
+
+  toComments = () => {
+    Taro.navigateTo({
+      url: '/pages/comment/index'
+    })
   }
 
   render() {
-    const { swiperImgs, swiperCount } = this.state;
+    const { swiperImgs, swiperCount, goodsLabels } = this.state;
     return (
       <View>
         <View style={{ position: 'relative' }}>
@@ -66,11 +91,11 @@ class Index extends Component {
           <View className="border-t-1">
             <View className="at-row shop-info border-b-1">
               <View>
-                <AtAvatar circle size={26} text='凹凸实验室'></AtAvatar>
+                <AtAvatar circle text='凹凸实验室'></AtAvatar>
               </View>
               <View className="ml-5" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
                 <Text className="md-t t1">余华客厅点</Text>
-                <View className="at-row">
+                <View className="at-row mt-2">
                   <View className="rate-c">
                     <AtRate value={2} size='15' />
                   </View>
@@ -97,25 +122,18 @@ class Index extends Component {
             <View>
               <AtDivider height={90} content='特别提示' />
             </View>
-            <View className="at-row align-i-c sm-t">
-              <View className="at-row align-i-c" style={{ justifyContent: 'flex-start' }}>
-                <View className="at-icon at-icon-chevron-right"></View>
-                <Text>有效期15天</Text>
-              </View>
-              <View className="at-row align-i-c" style={{ justifyContent: 'center' }}>
-                <View className="at-icon at-icon-chevron-right"></View>
-                <Text>无需预约</Text>
-              </View>
-              <View className="at-row align-i-c" style={{ justifyContent: 'flex-end' }}>
-                <View className="at-icon at-icon-chevron-right"></View>
-                <Text>不支持退款</Text>
-              </View>
+            <View className="at-row align-i-c sm-t" style={{ flexWrap: 'wrap' }}>
+              {
+                [...goodsLabels].map(label =>
+                  <View className="goods-label">
+                    <IconText icon={label.icon} text={label.text}></IconText>
+                  </View>
+                )
+              }
             </View>
+
             <View className="sm-t t2 mt-4">
-              * 兑换时间：11:00 ～ 21:00
-            </View>
-            <View className="sm-t t2 mt-4">
-              * 兑换时间：11:00 ～ 21:00
+              <IconText color="#ccc" text="兑换时间：11:00 ～ 21:00"></IconText>
             </View>
             <View className="sm-t t3 mt-4">
               打卡机的撒娇好看的上课就啊哈笪
@@ -129,6 +147,7 @@ class Index extends Component {
             <View className="at-row align-i-c sm-t">
               <CommentBox></CommentBox>
             </View>
+            <View onClick={this.toComments} className="more-com sm-t t-2">查看所有评论</View>
           </View>
         </View>
         <BmButton></BmButton>

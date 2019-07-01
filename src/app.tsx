@@ -10,7 +10,7 @@ import Index from './pages/home'
 import configStore from './store'
 
 import './app.scss'
-// import './assets/iconfont.css'
+import './assets/iconfont.css'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -35,6 +35,8 @@ class App extends Component {
       'pages/coupon/index',
       'pages/mine/index',
       'pages/goods/index',
+      'pages/comment/index',
+      'pages/userHistory/index',
     ],
     window: {
       backgroundTextStyle: 'light',

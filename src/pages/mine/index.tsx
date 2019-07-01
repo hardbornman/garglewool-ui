@@ -30,8 +30,10 @@ class Index extends Component {
     size: 25, color: '#ccc', value: 'bell',
   }
 
-  componentDidMount() {
-    console.log(this.props);
+  toUserHistory = () => {
+    Taro.navigateTo({
+      url:'/pages/userHistory/index'
+    })
   }
 
   render() {
@@ -47,11 +49,11 @@ class Index extends Component {
             <View className='at-icon at-icon-chevron-right' style={{ color: '#ccc' }}></View>
           </View>
           <View style={{ backgroundColor: '#fff' }}>
-            <AtGrid columnNum={4} hasBorder={false} data={
+            <AtGrid onClick={this.toUserHistory} columnNum={4} hasBorder={false} data={
               [
                 {
                   iconInfo: { size: 36, color: '#ccc', value: 'bell', },
-                  value: '未领用'
+                  value: '未领用',
                 },
                 {
                   iconInfo: { size: 36, color: '#ccc', value: 'bell', },

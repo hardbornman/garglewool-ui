@@ -37,12 +37,14 @@ class Index extends Component {
     return (
       <View>
         <View className="row align-center">
-          <AtAvatar circle size={26} text='凹凸实验室'></AtAvatar>
+          <AtAvatar circle text='凹凸实验室'></AtAvatar>
           <View className="ml-5">
             <View className="md-t">jrack</View>
             <View className="sm-t t2">2019-01-22 10:10:10</View>
           </View>
-          <AtRate size='15' value={2} className="com-rate" />
+          <View className="com-rate">
+          <AtRate size='15' value={2}  />
+          </View>
         </View>
         <View className="com-detail">
           <View className="sm-t t3 mt-2">
