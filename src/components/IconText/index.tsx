@@ -2,14 +2,21 @@ import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
-import '@/assets/iconfont.css'
+
+if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+  console.log(Taro.getEnv(), Taro.ENV_TYPE.WEAPP);
+
+  import('../../assets/iconfont.css');
+  import('../style.scss');
+}
+
 type PageStateProps = {}
 
 type PageDispatchProps = {}
 
 type PageOwnProps = {
   text: String,
-  icon: String,
+  icon?: String,
   color: String,
 }
 
@@ -26,7 +33,7 @@ class Index extends Component {
     const { text, icon, color } = this.props;
     return (
       <View className="row align-base" style={{ color }}>
-        <View className={icon}></View>
+        {icon && <View className={icon}></View>}
         <Text className="ml-2">{text}</Text>
       </View>
     )
@@ -35,7 +42,6 @@ class Index extends Component {
 
 Index.defaultProps = {
   text: '特殊说明',
-  icon: 'iconfont icon-shijian',
   color: '#fd0606'
 }
 

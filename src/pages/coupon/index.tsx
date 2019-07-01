@@ -81,6 +81,12 @@ class Index extends Component {
     console.log(this.props);
   }
 
+  couponClick(){
+    Taro.navigateTo({
+      url:'/pages/ticket/index'
+    })
+  }
+
   render() {
     const { list } = this.state;
     return (
@@ -88,7 +94,7 @@ class Index extends Component {
         <AtDivider className="top-title" lineColor="#f5f5f5" height={60} content="精选福利" />
         {
           list.map(item =>
-            <View>
+            <View onClick={this.couponClick}>
               <ImgBox key={item.id} object={item}></ImgBox>
             </View>
           )

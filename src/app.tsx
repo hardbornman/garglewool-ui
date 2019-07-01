@@ -11,6 +11,7 @@ import configStore from './store'
 
 import './app.scss'
 import './assets/iconfont.css'
+import '@/components/style.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -37,6 +38,7 @@ class App extends Component {
       'pages/goods/index',
       'pages/comment/index',
       'pages/userHistory/index',
+      'pages/ticket/index',
     ],
     window: {
       backgroundTextStyle: 'light',

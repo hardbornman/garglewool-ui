@@ -3,7 +3,11 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Image, Text, Button } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
 import ticketImg from './image/ticket.png'
-import '../style.scss'
+
+if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+  import('../style.scss');
+}
+
 import './index.scss'
 type PageStateProps = {}
 
@@ -83,7 +87,7 @@ class Index extends Component {
                 <Text>{price}</Text>
                 <Text className="old-price">{oldPrice}</Text>
               </View>
-              <View>
+              <View style={{marginLeft:'auto'}}>
                 <Button className="btn-1" onClick={btnClick}>{btnText}</Button>
               </View>
             </View>

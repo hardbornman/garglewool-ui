@@ -1,12 +1,17 @@
 import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
+
 import { View, Image, Text, Button } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
+
 import shopImg from './image/shop.png'
 import distanceImg from './image/distance.png'
 
-import '../style.scss'
 import './index.scss'
+
+if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+  import('../style.scss');
+}
 
 type PageStateProps = {}
 
@@ -61,7 +66,7 @@ class Index extends Component {
               <View className="md-t" style={{ color: '#fff' }}>到店原价买一送一</View>
               <View className="sm-t" style={{ color: '#f00' }}>100金币/¥1</View>
             </View>
-            <View>
+            <View style={{marginLeft:'auto'}}>
               <Button className="btn-1">立即抢</Button>
             </View>
           </View>

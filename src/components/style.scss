@@ -1,9 +1,15 @@
-.ml-2{
-  margin-left: 8px;
+.p-h-2{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.ml-5{
-  margin-left: 20px;
+.padding-2{
+  padding: 10px;
+}
+
+.padding-v-3{
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .mt-2 {
@@ -14,7 +20,31 @@
   margin-top: 16px;
 }
 
-.com-rate{
+.mt-5 {
+  margin-top: 20px !important;
+}
+
+.mr-2{
+  margin-right: 8px !important;
+}
+
+.ml-2{
+  margin-left: 8px;
+}
+
+.ml-3{
+  margin-left: 12px;
+}
+
+.ml-4{
+  margin-left: 16px;
+}
+
+.ml-5{
+  margin-left: 20px;
+}
+
+.ml-auto{
   margin-left: auto;
 }
 
@@ -30,6 +60,10 @@
   color: rgb(110, 107, 107);
 }
 
+.strong{
+  font-weight: bold;
+}
+
 .sm-t {
   font-size: 26px;
 }
@@ -38,32 +72,67 @@
   font-size: 30px;
 }
 
+
+.lg-t{
+  font-size: 40px !important;
+}
+
 .row {
   display: flex;
   flex-direction: row;
 }
-
 
 .col {
   display: flex;
   flex-direction: column;
 }
 
-
 .justify-bet {
   justify-content: space-between;
-}
-
-.align-center{
-  align-items: center;
 }
 
 .justify-center{
   justify-content: center;
 }
 
+.align-center{
+  align-items: center;
+}
+
 .align-base{
   align-items: baseline;
+}
+
+.bg-img{
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.relative{
+  position: relative;
+}
+
+.border-t {
+  border-top: 20px solid #f9f7f7;
+}
+
+.border-b-1{
+  border-bottom: 2px solid #f9f7f7;
+}
+.border-t-1{
+  border-top: 2px solid #f9f7f7;
+}
+
+.btn-2{
+  width: 140px;
+  height: 60px;
+  border-radius: 25px;
+  font-size: 26px;
+  text-align: center;
+  line-height: 60px;
+  border: 2px solid #ccc;
+  background: #fff;
+  color: rgb(34, 33, 33);
 }
 
 .btn-1 {

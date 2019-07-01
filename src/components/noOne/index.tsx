@@ -2,8 +2,12 @@ import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import './index.scss'
 import { AtButton, } from 'taro-ui'
+
+if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+  import('../style.scss');
+}
+import './index.scss'
 
 type PageStateProps = {}
 

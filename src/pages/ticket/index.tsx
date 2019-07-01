@@ -79,15 +79,31 @@ class Index extends Component {
         </View>
         <View className="goods-c">
           <View className="goods-info">
-            <Text className="goods-name md-t">到店元件是看电视剧啊老大的</Text>
-            <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
-              <Text className="goods-price md-t">$11</Text>
-              <Text className="goods-old-price sm-t">$11</Text>
-            </View>
+            <Text className="goods-name md-t">到店付原价相送一个送饭是</Text>
             <View className="sm-t t3">正在墙厚，只剩1个拉</View>
           </View>
-          <View className="mark">
-            比如：原价26元示范户否累，可以再带走一个26元产屏，超出部分自己买单
+          <View>
+            <View>
+              <AtDivider height={90} content='温馨提示' />
+            </View>
+            <View className="sm-t t2 mt-4">
+              <IconText color="#ccc" text="有效期"></IconText>
+            </View>
+            <View className="sm-t t2 mt-4">
+              <IconText color="#ccc" text="兑换时间：11:00 ～ 21:00"></IconText>
+            </View>
+            <View className="sm-t t2 mt-4">
+              <IconText color="#ccc" text="使用规则"></IconText>
+            </View>
+            <View className="sm-t t2 mt-4">
+              <IconText color="#ccc" text="兑换时间：11:00 ～ 21:00"></IconText>
+            </View>
+            <View className="sm-t t2 mt-4">
+              <IconText color="#fec94d" text="注: 由于该券为优惠限量活动，故不支持退款和退金币！"></IconText>
+            </View>
+          </View>
+          <View className=" mt-5">
+            <AtDivider height={90} content='店铺信息' />
           </View>
           <View className="border-t-1">
             <View className="at-row shop-info border-b-1">
@@ -107,11 +123,6 @@ class Index extends Component {
                 </View>
               </View>
             </View>
-            {/* <View className="at-row align-center border-b-1 padding-v-3 t2">
-              <View className="at-icon at-icon-map-pin md-t mr-2"></View>
-              <Text className="md-t">南京市余华他去说话撒商家</Text>
-              <View className="iconfont icon-dianhua md-t call"></View>
-            </View> */}
             <ListItem
               renderPre={
                 <View className="at-icon at-icon-map-pin md-t mr-2"></View>
@@ -121,47 +132,6 @@ class Index extends Component {
               }>
               南京市余华他去说话撒商家
             </ListItem>
-            <ListItem
-              renderPre={
-                <View className="iconfont icon-youhuquan-0 md-t mr-2"></View>
-              }
-              renderEnd={
-                <View className="at-icon at-icon-chevron-right md-t ml-auto"></View>
-              }>
-              <Text className="md-t">一元券</Text>
-              <Text className="ticket-m sm-t">到店原价买一送一</Text>
-            </ListItem>
-          </View>
-          <View>
-            <View>
-              <AtDivider height={90} content='特别提示' />
-            </View>
-            <View className="at-row align-center sm-t" style={{ flexWrap: 'wrap' }}>
-              {
-                [...goodsLabels].map(label =>
-                  <View className="goods-label">
-                    <IconText icon={label.icon} text={label.text}></IconText>
-                  </View>
-                )
-              }
-            </View>
-
-            <View className="sm-t t2 mt-4">
-              <IconText color="#ccc" text="兑换时间：11:00 ～ 21:00"></IconText>
-            </View>
-            <View className="sm-t t3 mt-4">
-              打卡机的撒娇好看的上课就啊哈笪
-              君卡就是笪君啊上课哈笪君卡上还得看撒哈笪君看撒花的钱物 i到户外去对话阿手机壳分开就撒从电脑上 v IE我秋风额迪乌夫啊
-            </View>
-          </View>
-          <View>
-            <View>
-              <AtDivider height={90} content='用户评论' />
-            </View>
-            <View className="at-row align-center sm-t">
-              <CommentBox></CommentBox>
-            </View>
-            <View onClick={this.toComments} className="more-com sm-t t-2">查看所有评论</View>
           </View>
         </View>
         <BmButton></BmButton>
