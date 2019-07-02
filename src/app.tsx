@@ -10,7 +10,7 @@ import Index from './pages/home'
 import configStore from './store'
 
 import './app.scss'
-import '@/assets/iconfont.css'
+import './assets/iconfont.css'
 import '@/components/style.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
