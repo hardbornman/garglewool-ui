@@ -35,7 +35,7 @@ class Index extends Component {
     const { swiperImgs, swiperCount } = this.state;
     const { close } = this.props;
     return (
-      <View className="full-screen" onClick={close}>
+      <View className="full-screen" onClick={close} onTouchMove={e => { e.stopPropagation() }}>
         <Swiper className='full-screen-swiper-c' onChange={e => { this.setState({ swiperCount: e.detail.current }) }} >
           {
             swiperImgs.map(img =>

@@ -36,12 +36,11 @@ class Index extends Component {
   }
 
   render() {
-    const {renderEnd, renderPre } = this.props;
     return (
       <View className="row align-center border-b-1 padding-v-3 t2">
-        {renderPre && renderPre}
+        {this.props.renderPre}
         <Text className="md-t">{this.props.children}</Text>
-        {renderEnd && renderEnd}
+        {this.props.renderEnd}
       </View>
     )
   }
