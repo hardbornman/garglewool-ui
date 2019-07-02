@@ -6,8 +6,10 @@ import './index.scss'
 import { AtButton, AtAvatar, AtRate, AtDivider } from 'taro-ui'
 import CommentBox from '@/components/commentBox'
 import BmButton from '@/components/bmButton'
-import IconText from '@/components/IconText'
+import IconText from '@/components/iText'
 import ListItem from '@/components/listItem'
+import Price from '@/components/price'
+import ImgScreenFull from '@/components/imgScreenFull'
 
 import 'taro-ui/dist/style/components/rate.scss'
 
@@ -52,7 +54,8 @@ class Index extends Component {
         text: '特殊原因',
         icon: 'iconfont icon-shijian',
       },
-    ]
+    ],
+    fullScreenVisible: false,
   }
 
   toComments = () => {
@@ -61,8 +64,24 @@ class Index extends Component {
     })
   }
 
+  toPay = () => {
+    Taro.navigateTo({
+      url: '/pages/pay/index'
+    })
+  }
+  commentImgClick = () => {
+    this.setState({
+      fullScreenVisible: true,
+    })
+  }
+  fullScreenClose = () => {
+    this.setState({
+      fullScreenVisible: false,
+    })
+  }
+
   render() {
-    const { swiperImgs, swiperCount, goodsLabels } = this.state;
+    const { swiperImgs, swiperCount, goodsLabels, fullScreenVisible } = this.state;
     return (
       <View>
         <View style={{ position: 'relative' }}>
@@ -80,10 +99,7 @@ class Index extends Component {
         <View className="goods-c">
           <View className="goods-info">
             <Text className="goods-name md-t">到店元件是看电视剧啊老大的</Text>
-            <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
-              <Text className="goods-price md-t">$11</Text>
-              <Text className="goods-old-price sm-t">$11</Text>
-            </View>
+            <Price></Price>
             <View className="sm-t t3">正在墙厚，只剩1个拉</View>
           </View>
           <View className="mark">
@@ -140,14 +156,18 @@ class Index extends Component {
               {
                 [...goodsLabels].map(label =>
                   <View className="goods-label">
-                    <IconText icon={label.icon} text={label.text}></IconText>
+                    <IconText icon={label.icon}>
+                      {label.text}
+                    </IconText>
                   </View>
                 )
               }
             </View>
 
             <View className="sm-t t2 mt-4">
-              <IconText color="#ccc" text="兑换时间：11:00 ～ 21:00"></IconText>
+              <IconText color="#ccc" >
+                兑换时间：11:00 ～ 21:00
+              </IconText>
             </View>
             <View className="sm-t t3 mt-4">
               打卡机的撒娇好看的上课就啊哈笪
@@ -159,12 +179,18 @@ class Index extends Component {
               <AtDivider height={90} content='用户评论' />
             </View>
             <View className="at-row align-center sm-t">
-              <CommentBox></CommentBox>
+              <CommentBox imgClick={this.commentImgClick}></CommentBox>
             </View>
             <View onClick={this.toComments} className="more-com sm-t t-2">查看所有评论</View>
           </View>
         </View>
-        <BmButton></BmButton>
+        <BmButton onClick={this.toPay}>
+          <View className="bm-btn-back all-center iconfont icon-shangcheng-1">
+          </View>
+        </BmButton>
+        {
+          fullScreenVisible && <ImgScreenFull close={this.fullScreenClose} />
+        }
       </View >
     )
   }

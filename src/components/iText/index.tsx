@@ -1,7 +1,7 @@
 import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import './index.scss'
+// import './index.scss'
 
 if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
   console.log(Taro.getEnv(), Taro.ENV_TYPE.WEAPP);
@@ -15,7 +15,6 @@ type PageStateProps = {}
 type PageDispatchProps = {}
 
 type PageOwnProps = {
-  text: String,
   icon?: String,
   color: String,
 }
@@ -30,18 +29,17 @@ interface Index {
 
 class Index extends Component {
   render() {
-    const { text, icon, color } = this.props;
+    const { children, icon, color } = this.props;
     return (
       <View className="row align-base" style={{ color }}>
         {icon && <View className={icon}></View>}
-        <Text className="ml-2">{text}</Text>
+        <Text className="ml-2">{children}</Text>
       </View>
     )
   }
 }
 
 Index.defaultProps = {
-  text: '特殊说明',
   color: '#fd0606'
 }
 

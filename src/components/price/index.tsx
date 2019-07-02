@@ -2,12 +2,19 @@ import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
+import { AtButton, } from 'taro-ui'
+if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+  import('../style.scss');
+}
 
 type PageStateProps = {}
 
 type PageDispatchProps = {}
 
-type PageOwnProps = {}
+type PageOwnProps = {
+  price: String,
+  old?: String,
+}
 
 type PageState = {}
 
@@ -23,22 +30,18 @@ class Index extends Component {
   }
 
   render() {
-    const { btnText, children, onClick } = this.props;
+    const { price, old } = this.props;
     return (
-      <View className="bm-btn-c">
-        {children}
-        <View className="bm-btn-r" onClick={onClick}>
-          {btnText}
-        </View>
-      </View >
+      <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end' }}>
+        <Text className="price md-t">{price}</Text>
+        {old && <Text className="old-price sm-t">{old}</Text>}
+      </View>
     )
   }
 }
 
 Index.defaultProps = {
-  btnText: '立即抢购',
-  onClick: () => { console.log('bmBtn点击'); }
+  price: 0,
 }
-
 
 export default Index as ComponentClass<PageOwnProps, PageState>

@@ -6,7 +6,7 @@ import './index.scss'
 import { AtButton, AtAvatar, AtRate, AtDivider } from 'taro-ui'
 import CommentBox from '@/components/commentBox'
 import BmButton from '@/components/bmButton'
-import IconText from '@/components/IconText'
+import IconText from '@/components/iText'
 import ListItem from '@/components/listItem'
 
 import 'taro-ui/dist/style/components/rate.scss'

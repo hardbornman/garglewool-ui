@@ -37,6 +37,7 @@ class Index extends Component {
 
   render() {
     const { commentImgs } = this.state;
+    const { imgClick } = this.props;
     return (
       <View>
         <View className="row align-center">
@@ -46,7 +47,7 @@ class Index extends Component {
             <View className="sm-t t2">2019-01-22 10:10:10</View>
           </View>
           <View className="com-rate">
-          <AtRate size='15' value={2}  />
+            <AtRate size='15' value={2} />
           </View>
         </View>
         <View className="com-detail">
@@ -57,7 +58,7 @@ class Index extends Component {
           <View className="row com-img-p" style={{ flexWrap: 'wrap' }}>
             {
               [...commentImgs].map(img =>
-                <View className="com-img-c" style={{ backgroundImage: `url(${img})` }}></View>
+                <View onClick={imgClick} className="com-img-c" style={{ backgroundImage: `url(${img})` }}></View>
               )
             }
           </View>
@@ -65,6 +66,10 @@ class Index extends Component {
       </View >
     )
   }
+}
+
+Index.defaultProps = {
+  imgClick: () => {console.log('图片点击');}
 }
 
 export default Index as ComponentClass<PageOwnProps, PageState>

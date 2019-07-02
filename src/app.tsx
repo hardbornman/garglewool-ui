@@ -39,6 +39,7 @@ class App extends Component {
       'pages/comment/index',
       'pages/userHistory/index',
       'pages/ticket/index',
+      'pages/pay/index',
     ],
     window: {
       backgroundTextStyle: 'light',
