@@ -4,10 +4,12 @@ import { View, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
 import { AtButton, AtRate, AtAvatar } from 'taro-ui'
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  import('../style.scss');
-}
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   import('../style.scss');
+// }
 import './index.scss'
+import '../style.scss'
+
 type PageStateProps = {}
 
 type PageDispatchProps = {}
@@ -69,7 +71,7 @@ class Index extends Component {
 }
 
 Index.defaultProps = {
-  imgClick: () => {console.log('图片点击');}
+  imgClick: () => { console.log('图片点击'); }
 }
 
-export default Index as ComponentClass<PageOwnProps, PageState>
+export default Index as ComponentClass<PageOwnProps, PageState> 

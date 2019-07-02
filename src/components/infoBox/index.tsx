@@ -3,9 +3,10 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text, Image } from '@tarojs/components'
 import './index.scss'
 
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  import('../style.scss');
-}
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   import('../style.scss');
+// }
+import '../style.scss'
 import shopImage from './image/shop.png'
 
 type PageStateProps = {}

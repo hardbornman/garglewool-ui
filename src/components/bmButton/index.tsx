@@ -7,7 +7,10 @@ type PageStateProps = {}
 
 type PageDispatchProps = {}
 
-type PageOwnProps = {}
+type PageOwnProps = {
+  btnText?: String,
+  onClick?: () => void,
+}
 
 type PageState = {}
 
@@ -23,10 +26,10 @@ class Index extends Component {
   }
 
   render() {
-    const { btnText, children, onClick } = this.props;
+    const { btnText, onClick } = this.props;
     return (
       <View className="bm-btn-c">
-        {children}
+        {this.props.children}
         <View className="bm-btn-r" onClick={onClick}>
           {btnText}
         </View>

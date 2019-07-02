@@ -2,9 +2,10 @@ import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text, Swiper, SwiperItem } from '@tarojs/components'
 import './index.scss'
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  import('../style.scss');
-}
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   import('../style.scss');
+// }
+import '../style.scss'
 
 type PageStateProps = {}
 

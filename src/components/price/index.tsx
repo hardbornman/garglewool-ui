@@ -3,10 +3,10 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
 import { AtButton, } from 'taro-ui'
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  import('../style.scss');
-}
-
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   import('../style.scss');
+// }
+import '../style.scss'
 type PageStateProps = {}
 
 type PageDispatchProps = {}

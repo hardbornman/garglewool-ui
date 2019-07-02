@@ -5,12 +5,13 @@ import { AtIcon } from 'taro-ui'
 import ticketImg from './image/ticket.png'
 import Price from '@/components/price'
 
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  import('../style.scss');
-}
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   import('../style.scss');
+// }
 
 import './index.scss'
-
+import '../style.scss'
+import '@/assets/iconfont.css'
 type PageStateProps = {}
 
 type PageDispatchProps = {}

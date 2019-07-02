@@ -8,10 +8,11 @@ import shopImg from './image/shop.png'
 import distanceImg from './image/distance.png'
 
 import './index.scss'
+import '../style.scss'
 
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  import('../style.scss');
-}
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   import('../style.scss');
+// }
 
 type PageStateProps = {}
 

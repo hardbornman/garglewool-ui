@@ -68,7 +68,7 @@ class Index extends Component {
             啥抠脚大汉阿手机号笪君卡是赌气吴浩的撒娇地区为 i 的阿坚上课东湖区我但是将卡东湖区我 i但是看见啊暑期我笪君卡上
           </View>
         </View>
-        <BmButton onClick={this.pay}>
+        <BmButton btnText="222" onClick={this.pay}>
           <View className="w-400 all-center" style={{ color: 'rgb(249, 84, 84)' }}>
             倒计时: 10:10
           </View>

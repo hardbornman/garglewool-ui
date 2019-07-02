@@ -3,12 +3,15 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
 // import './index.scss'
 
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  console.log(Taro.getEnv(), Taro.ENV_TYPE.WEAPP);
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   console.log(Taro.getEnv(), Taro.ENV_TYPE.WEAPP);
 
-  import('../../assets/iconfont.css');
-  import('../style.scss');
-}
+//   import('../../assets/iconfont.css');
+//   import('../style.scss');
+// }
+
+import '../style.scss';
+import '@/assets/iconfont.css'
 
 type PageStateProps = {}
 
@@ -29,11 +32,11 @@ interface Index {
 
 class Index extends Component {
   render() {
-    const { children, icon, color } = this.props;
+    const {icon, color } = this.props;
     return (
       <View className="row align-base" style={{ color }}>
         {icon && <View className={icon}></View>}
-        <Text className="ml-2">{children}</Text>
+        <Text className="ml-2">{this.props.children}</Text>
       </View>
     )
   }

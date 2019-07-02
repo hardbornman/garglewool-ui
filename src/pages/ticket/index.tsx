@@ -134,7 +134,7 @@ class Index extends Component {
             </ListItem>
           </View>
         </View>
-        <BmButton></BmButton>
+        <BmButton btnText="请购"></BmButton>
       </View >
     )
   }

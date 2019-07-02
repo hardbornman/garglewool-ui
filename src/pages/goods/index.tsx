@@ -184,7 +184,7 @@ class Index extends Component {
             <View onClick={this.toComments} className="more-com sm-t t-2">查看所有评论</View>
           </View>
         </View>
-        <BmButton onClick={this.toPay}>
+        <BmButton onClick={this.toPay} btnText="事实上">
           <View className="bm-btn-back all-center iconfont icon-shangcheng-1">
           </View>
         </BmButton>

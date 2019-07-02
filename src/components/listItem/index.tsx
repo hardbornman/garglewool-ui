@@ -4,11 +4,13 @@ import { View, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import { AtButton, } from 'taro-ui'
 
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  import('../style.scss');
-}
+// if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+//   import('../style.scss');
+// }
 
 import './index.scss'
+import '../style.scss'
+
 
 type PageStateProps = {}
 
@@ -34,11 +36,11 @@ class Index extends Component {
   }
 
   render() {
-    const { children, renderEnd, renderPre } = this.props;
+    const {renderEnd, renderPre } = this.props;
     return (
       <View className="row align-center border-b-1 padding-v-3 t2">
         {renderPre && renderPre}
-        <Text className="md-t">{children}</Text>
+        <Text className="md-t">{this.props.children}</Text>
         {renderEnd && renderEnd}
       </View>
     )
