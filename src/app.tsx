@@ -40,6 +40,7 @@ class App extends Component {
       'pages/userHistory/index',
       'pages/ticket/index',
       'pages/pay/index',
+      'pages/address/index',
     ],
     window: {
       backgroundTextStyle: 'light',

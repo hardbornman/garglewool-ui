@@ -37,6 +37,7 @@ const config = {
     }
   },
   defineConstants: {
+    LOCATION_APIKEY: JSON.stringify('RQQBZ-NLD3K-2SLJ4-ACZIX-WRWOV-RNFJS')
   },
   copy: {
     patterns: [

@@ -32,7 +32,7 @@ interface Index {
 
 class Index extends Component {
   render() {
-    const {icon, color } = this.props;
+    const { icon, color } = this.props;
     return (
       <View className="row align-base" style={{ color }}>
         {icon && <View className={icon}></View>}

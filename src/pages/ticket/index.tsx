@@ -87,19 +87,19 @@ class Index extends Component {
               <AtDivider height={90} content='温馨提示' />
             </View>
             <View className="sm-t t2 mt-4">
-              <IconText color="#ccc" text="有效期"></IconText>
+              <IconText color="#ccc">有效期</IconText>
             </View>
             <View className="sm-t t2 mt-4">
-              <IconText color="#ccc" text="兑换时间：11:00 ～ 21:00"></IconText>
+              <IconText color="#ccc">兑换时间：11:00 ～ 21:00</IconText>
             </View>
             <View className="sm-t t2 mt-4">
-              <IconText color="#ccc" text="使用规则"></IconText>
+              <IconText color="#ccc">使用规则</IconText>
             </View>
             <View className="sm-t t2 mt-4">
-              <IconText color="#ccc" text="兑换时间：11:00 ～ 21:00"></IconText>
+              <IconText color="#ccc">兑换时间：11:00 ～ 21:00</IconText>
             </View>
             <View className="sm-t t2 mt-4">
-              <IconText color="#fec94d" text="注: 由于该券为优惠限量活动，故不支持退款和退金币！"></IconText>
+              <IconText color="#fec94d">注: 由于该券为优惠限量活动，故不支持退款和退金币！</IconText>
             </View>
           </View>
           <View className=" mt-5">

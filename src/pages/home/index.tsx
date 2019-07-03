@@ -38,7 +38,7 @@ class Index extends Component {
     ]
   }
 
-  componentDidMount(){
+  componentDidMount() {
   }
 
   tabHandleClick = index => {
@@ -47,10 +47,20 @@ class Index extends Component {
     })
   }
 
+  toChangeAddress = () => {
+    Taro.navigateTo({
+      url:'/pages/address/index'
+    })
+  }
+
   render() {
     const { tabCurrent, tabList } = this.state;
     return (
       <View>
+        <View className="local-add all-center" onClick={this.toChangeAddress}>
+          <View>南京雨花台区</View>
+          <View className="at-icon at-icon-chevron-down ml-2" style={{ color: '#9e9b9b' }}></View>
+        </View>
         <AtTabs
           current={tabCurrent}
           scroll
