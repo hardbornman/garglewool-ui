@@ -15,7 +15,8 @@
 		"dev:alipay": "npm run build:alipay -- --watch",
 		"dev:tt": "npm run build:tt -- --watch",
 		"dev:h5": "npm run build:h5 -- --watch",
-		"dev:rn": "npm run build:rn -- --watch"
+		"dev:rn": "npm run build:rn -- --watch",
+		"api": "sm2tsservice --clear"
 	},
 	"author": "",
 	"license": "MIT",
@@ -60,7 +61,7 @@
 		"eslint-plugin-import": "^2.12.0",
 		"eslint-plugin-react": "^7.8.2",
 		"eslint-plugin-taro": "1.3.4",
-		"sm2tsservice": "^1.1.2",
+		"sm2tsservice": "^1.1.4",
 		"stylelint": "9.3.0",
 		"stylelint-config-taro-rn": "1.3.0-beta.5",
 		"stylelint-taro-rn": "1.3.0-beta.5",

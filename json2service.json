@@ -1,5 +1,5 @@
 {
-  "url": "http://forfuture.club:3000/api/open/plugin/export-full?type=json&pid=12&status=all&token=62d4a15a5ca4f90351914d1f394190ccd1c95881feb3631a360d9e4542bf1645",
+  "url": "http://forfuture.club:3000/api/open/plugin/export-full?type=json&pid=27&status=all&token=63aec601f79f015c33be235338b4274773d53d1e996b23f20783a5fbc4e0e736",
   "type": "yapi",
   "swaggerParser": {}
 }

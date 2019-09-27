@@ -3,7 +3,8 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
 import services from '@/services/api/DefaultApi'
-services.$basePath = 'http://forfuture.club:3000/mock/12'
+// services.$basePath = 'http://forfuture.club:3000/mock/12'
+services.$basePath = 'http://192.168.2.117:8083'
 
 import Index from './pages/home'
 
@@ -41,6 +42,8 @@ class App extends Component {
       'pages/ticket/index',
       'pages/pay/index',
       'pages/address/index',
+      'pages/login/index',
+      'pages/register/index',
     ],
     window: {
       backgroundTextStyle: 'light',

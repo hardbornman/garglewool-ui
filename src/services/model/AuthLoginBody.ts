@@ -12,13 +12,8 @@
 
 import * as models from './models';
 
-/**
- * 套餐管理
- */
-export interface GwPackagesId1Data {
-  /**
-   * 是否成功
-   */
-  "result"?: boolean;
+export interface AuthLoginBody {
+  "name"?: string;
+  "password"?: string;
 }
 

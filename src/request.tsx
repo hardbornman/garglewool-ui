@@ -5,7 +5,7 @@ import qs from 'qs';
 // const inst = axios.create({
 //   timeout: 2000,
 //   withCredentials: true,
-//   headers: {}
+//   header: {}
 // });
 
 // @cc: 检测 axios 响应状态
@@ -51,15 +51,16 @@ export class WrappedFetch {
   ) {
     let config = {
       ...extra,
-      method: method.toLocaleLowerCase(),
-      headers: { ...header }
+      method: method.toLocaleUpperCase(),
+      header: { ...header }
     };
+    console.log('11',data,header);
     // json
     if (data) {
       config = {
         ...config,
-        headers: {
-          ...config.headers,
+        header: {
+          ...config.header,
           'Content-Type': 'application/json'
         },
         data
@@ -69,13 +70,15 @@ export class WrappedFetch {
     if (form) {
       config = {
         ...config,
-        headers: {
-          ...config.headers,
+        header: {
+          ...config.header,
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         data: qs.stringify(form)
       };
     }
+
+    console.log(config);
 
     return Taro.request({ ...config, url })
       .then(res => console.log(res.data))

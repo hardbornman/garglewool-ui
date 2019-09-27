@@ -5,6 +5,8 @@ $color-brand-dark: #c12f13;
 $color-price: #f1870f;
 $color-old-price: #ccc;
 
+@import "~taro-ui/dist/style/components/article.scss";
+@import "~taro-ui/dist/style/components/input.scss";
 @import "~taro-ui/dist/style/components/tabs.scss";
 @import "~taro-ui/dist/style/components/flex.scss";
 @import "~taro-ui/dist/style/components/button.scss";
@@ -16,3 +18,8 @@ $color-old-price: #ccc;
 @import "~taro-ui/dist/style/components/rate.scss";
 @import "~taro-ui/dist/style/components/list.scss";
 @import "~taro-ui/dist/style/components/segmented-control.scss";
+
+.at-input{
+  margin-left: 0;
+  padding-left: 20px;
+}

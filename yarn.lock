@@ -7514,10 +7514,10 @@ slice-ansi@^2.1.0:
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
 
-sm2tsservice@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.npm.taobao.org/sm2tsservice/download/sm2tsservice-1.1.2.tgz#dee97ea88612981acaf523eb5abac6eec3025276"
-  integrity sha1-3ul+qIYSmBrK9SPrWrrG7sMCUnY=
+sm2tsservice@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.npm.taobao.org/sm2tsservice/download/sm2tsservice-1.1.4.tgz#6ee458cd70c67e0c8dc46e3a858817094edc0090"
+  integrity sha1-buRYzXDGfgyNxG46hYgXCU7cAJA=
   dependencies:
     ajv "^6.9.1"
     commander "^2.19.0"
